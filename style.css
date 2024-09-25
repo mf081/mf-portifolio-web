@@ -1,0 +1,58 @@
+body {
+    font-family: 'Roboto', sans-serif; 
+}
+
+h1, h2, h3, h4, h5, h6, a {
+    font-family: 'Sen', sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: column; /* Itens em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    width: 300px; /* Largura do cabeçalho */
+    height: 100vh; /* Altura total da viewport */
+    position: fixed; /* Fixa o cabeçalho na tela */
+    border: 2px solid black; /* Borda preta */
+    margin-bottom: 20px;
+}
+
+.image-container {
+    display: flex; 
+    flex-direction: column; /* Imagem em cima do nome */
+    align-items: center; /* Centraliza imagem e nome */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+header img {
+    border-radius: 50%;
+    object-fit: cover; 
+    width: 100px; /* Ajuste de largura */
+    height: 100px; /* Ajuste de altura */
+}
+
+.image-container h1 {
+    margin: 10px 0; /* Espaçamento vertical */
+    font-size: 1.4rem; /* Tamanho da fonte */
+    text-align: center; /* Centraliza texto */
+    max-width: 100%; /* Não ultrapassa largura do cabeçalho */
+    white-space: nowrap; /* Mantém texto em uma linha */
+}
+
+nav {
+    display: flex;
+    flex-direction: column; /* Botões em coluna */
+}
+
+button {
+    background-color: #0D99FF;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0a6fb8; /* Cor ao passar o mouse */
+}
