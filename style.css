@@ -7,7 +7,7 @@
 html, body {
     width: 100%;
     height: 100%;
-    background-color: #f4f4f4; /* Cor de fundo mais suave */
+    background-color: #fff; /* Cor de fundo mais suave */
     font-family: 'Sen', sans-serif; /* Fonte padrão */
     color: #333; /* Cor padrão do texto */
     display: flex;
@@ -23,20 +23,17 @@ main {
 h1 {
     font-family: 'Sen', sans-serif; /* Fonte padrão */
     font-size: 40px;
-
 }
 
-
-.inicio-section-container {
+.container-inicio {
     display: grid;
     grid-template-columns: 2fr 1fr;
     height: 945px;
     justify-content: center; /* Alinhamento horizontal */
-    align-items: center;    /* Alinhamento vertical */
-
+    align-items: center; /* Alinhamento vertical */
 }
 
-.inicio-section-container > h2 { 
+.container-inicio > h2 { 
     text-align: center;
     font-family: Actor;
     font-size: 25px;
@@ -45,6 +42,7 @@ h1 {
     line-height: normal;
     letter-spacing: 5px;
 }
+
 h2 { 
     text-align: center;
     font-family: Actor;
@@ -55,7 +53,7 @@ h2 {
     letter-spacing: 5px;
 }
 
-.inicio-section-container > span {
+.container-inicio > span {
     color: #000;
     text-align: center;
     font-family: Actor;
@@ -65,55 +63,54 @@ h2 {
     line-height: normal;
 }
 
-.apresentação-content {
+.conteudo-apresentacao {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.social-icons {
+.icones-sociais {
     display: flex;
     flex-direction: row;
 }
 
+
+
 /* SOBRE MIM */
 
-
-
-.sobre-mim-section-container {
+.container-sobre-mim {
     display: grid;
     grid-template-columns: 1fr; /* Define uma coluna para o título */
     grid-template-rows: auto 1fr; /* Define uma linha para o título e outra para o conteúdo */
     justify-items: center; /* Centraliza o conteúdo horizontalmente */
-    height: 527px; /* Altura fixa do container */
+    height: 460px; /* Altura fixa do container */
 }
 
-.section-title {
+.titulo-secao {
     grid-column: 1 / -1; /* Faz o título ocupar a largura total */
     text-align: center; /* Centraliza o título */
     margin-bottom: 20px; /* Espaçamento abaixo do título */
 }
 
-.sobre-mim-content {
+.conteudo-sobre-mim {
     display: grid;
     grid-template-columns: 1fr 2fr; /* Foto 1/3 e texto 2/3 */
     align-items: center; /* Centraliza verticalmente o conteúdo */
-    width: 100%; /* Faz o conteúdo ocupar a largura total */
     height: 300px;
 }
 
-.sobre-mim-foto {
+.foto-sobre-mim {
     display: flex;
     justify-content: flex-end; /* Centraliza a foto horizontalmente */
     align-items: center; /* Centraliza a foto verticalmente */
 }
 
-.sobre-mim-foto img {
+.foto-sobre-mim img {
     max-width: 100%; /* Garante que a foto não ultrapasse o tamanho da div */
     height: auto; /* Mantém a proporção da imagem */
 }
 
-.sobre-mim-texto-container {
+.texto-sobre-mim {
     display: flex;
     flex-direction: column;
     justify-content: center; /* Centraliza o texto verticalmente */
@@ -121,6 +118,131 @@ h2 {
     padding-left: 20px; /* Espaçamento entre a foto e o texto */
 }
 
-.sobre-mim-texto-container > p {
+.texto-sobre-mim > p {
     width: 500px; /* O texto ocupa toda a área da coluna de texto */
-}  adicione width 100% nos containers 
+}
+
+/* FORMACAO */
+.container-formacao {
+    width: 80%;
+    max-width: 1200px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.titulo-principal {
+    font-family: 'Sen', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 40px;
+}
+
+.grid-formacao {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card-formacao {
+    background-color: #fff;
+    border: 2px solid #ff0000;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card-formacao:hover {
+    transform: translateY(-5px);
+}
+
+.card-formacao h2 {
+    font-family: 'Actor', sans-serif;
+    font-size: 22px;
+    color: #ff0000;
+    margin-bottom: 10px;
+}
+
+.card-formacao p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+/* SEÇÃO HABILIDADES */
+.secao-habilidades {
+    width: 80%;
+    max-width: 1200px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.secao-habilidades h1 {
+    font-family: 'Sen', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 40px;
+}
+
+/* Container de habilidades organizadas em flexbox */
+.container-habilidades {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px; /* Espaçamento entre as colunas */
+    flex-wrap: wrap; /* Adiciona a possibilidade de quebrar a linha em telas menores */
+}
+
+/* Colunas de Hard Skills e Soft Skills */
+.hard-skills, .soft-skills {
+    flex: 1; /* As colunas ocupam o mesmo espaço */
+    text-align: left;
+    min-width: 300px; /* Define uma largura mínima para que não quebre em telas muito pequenas */
+}
+
+/* Estilização dos títulos das colunas */
+.hard-skills h2, .soft-skills h2 {
+    font-family: 'Actor', sans-serif;
+    font-size: 24px;
+    color: #ff0000;
+    margin-bottom: 20px;
+    text-align: center; /* Centraliza o título das habilidades */
+}
+
+/* Listas de habilidades */
+.hard-skills ul, .soft-skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.hard-skills li, .soft-skills li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+/* Ícones nas hard skills */
+.hard-skills li img {
+    margin-left: 10px;
+    width: 24px;
+    height: 24px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.hard-skills li:hover img {
+    filter: none;
+}
