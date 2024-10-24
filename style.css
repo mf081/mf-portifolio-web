@@ -1,58 +1,53 @@
-body {
-    font-family: 'Roboto', sans-serif; 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6, a {
-    font-family: 'Sen', sans-serif;
+html, body {
+    height: 100%; /* Garante que o body preencha toda a altura da página */
+    background-color: #fff; /* Cor de fundo do corpo */
+    display: flex; /* Usar flexbox para alinhar os elementos */
+    flex-direction: column; /* Coluna como direção principal */
 }
 
-header {
+main {
     display: flex;
-    flex-direction: column; /* Itens em coluna */
+    flex-direction: column;
     align-items: center; /* Centraliza horizontalmente */
-    width: 300px; /* Largura do cabeçalho */
-    height: 100vh; /* Altura total da viewport */
-    position: fixed; /* Fixa o cabeçalho na tela */
-    border: 2px solid black; /* Borda preta */
-    margin-bottom: 20px;
 }
 
-.image-container {
-    display: flex; 
-    flex-direction: column; /* Imagem em cima do nome */
-    align-items: center; /* Centraliza imagem e nome */
-    margin-bottom: 20px; /* Espaçamento inferior */
+.inicio {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Define duas colunas iguais */
+    justify-items: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    text-align: center; /* Centraliza o texto */
+    gap: 20px; /* Espaçamento entre os itens */
 }
 
-header img {
-    border-radius: 50%;
-    object-fit: cover; 
-    width: 100px; /* Ajuste de largura */
-    height: 100px; /* Ajuste de altura */
+h1 {
+    color: black;
+    font-size: 60px;
+    font-family: 'Sen', sans-serif; /* Adicione sans-serif como fallback */
+    font-weight: 400;
 }
 
-.image-container h1 {
-    margin: 10px 0; /* Espaçamento vertical */
-    font-size: 1.4rem; /* Tamanho da fonte */
-    text-align: center; /* Centraliza texto */
-    max-width: 100%; /* Não ultrapassa largura do cabeçalho */
-    white-space: nowrap; /* Mantém texto em uma linha */
+.subtitle {
+    color: black;
+    font-size: 25px;
+    font-family: 'Actor', sans-serif; /* Adicione sans-serif como fallback */
+    font-weight: 400;
+    letter-spacing: 5px;
 }
 
-nav {
-    display: flex;
-    flex-direction: column; /* Botões em coluna */
+.profile-image {
+    border-radius: 50%; /* Adiciona borda arredondada na imagem de perfil */
+    align-items: ;
 }
 
-button {
-    background-color: #0D99FF;
-    padding: 10px;
-    border-radius: 8px;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0a6fb8; /* Cor ao passar o mouse */
+/* Adicione estilos para as seções */
+section {
+    width: 100%; /* Permite que a seção ocupe toda a largura */
+    padding: 20px; /* Espaçamento interno */
 }
