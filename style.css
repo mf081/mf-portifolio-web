@@ -72,6 +72,18 @@ h2 {
 .icones-sociais {
     display: flex;
     flex-direction: row;
+    cursor: pointer; /* Altera o cursor para um ponteiro */
+    /* transition: transform 0.3s;  */
+    
+}
+
+.icones-sociais img:hover {
+    transform: scale(1.1); /* Aumenta levemente o ícone ao passar o mouse */
+}
+
+.minha-foto{
+    border-radius: 50%;
+    /* object-fit: cover;  */
 }
 
 
@@ -121,6 +133,8 @@ h2 {
 .texto-sobre-mim > p {
     width: 500px; /* O texto ocupa toda a área da coluna de texto */
 }
+
+
 
 /* FORMACAO */
 .container-formacao {
@@ -173,24 +187,37 @@ h2 {
 
 /* SEÇÃO HABILIDADES */
 
-.secao-habilidades-container{
+.secao-habilidades-container {
     display: grid;
     grid-template-columns: 1fr; /* Define uma coluna para o título */
     grid-template-rows: auto 1fr; /* Define uma linha para o título e outra para o conteúdo */
     justify-items: center; /* Centraliza o conteúdo horizontalmente */
     height: auto;
+    margin: 6rem 0rem;
 }
 
 .secao-habilidades-conteudo {
     display: grid;
-    grid-template-columns: 1fr 2fr; /* Foto 1/3 e texto 2/3 */
-    align-items: center; /* Centraliza verticalmente o conteúdo */
-    height: 300px;
+    grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+    justify-items: center; /* Centraliza os itens na grade */
+    margin: 2rem 2rem;
 }
 
+.soft-skills, .hard-skills {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
 
+.hard-skills {
+    align-items: center; /* Centraliza o conteúdo dentro da div */
+    margin-left: 20px; /* Move um pouco para a direita */
+}
 
-
+.soft-skills {
+    align-items: flex-start; /* Alinha à esquerda */
+    margin-right: 20px; /* Move um pouco para a esquerda */
+}
 
 /* Estilização dos títulos das colunas */
 .hard-skills h2, .soft-skills h2 {
@@ -198,7 +225,7 @@ h2 {
     font-size: 24px;
     color: #ff0000;
     margin-bottom: 20px;
-    text-align: center; /* Centraliza o título das habilidades */
+    text-align: center;
 }
 
 /* Listas de habilidades */
@@ -208,7 +235,6 @@ h2 {
 }
 
 .hard-skills li, .soft-skills li {
-    font-family: 'Roboto', sans-serif;
     font-size: 18px;
     color: #333;
     margin-bottom: 10px;
